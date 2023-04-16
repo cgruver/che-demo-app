@@ -65,6 +65,10 @@ function getTools() {
   mv ${TEMP_DIR}/node-${NODE_VERSION}-linux-x64 ${TOOLS_DIR}/node
   rm -rf "${TEMP_DIR}"
 
+  ## Local Scripts
+  cp ./gitSecret.sh ${TOOLS_DIR}/bin
+  chmod +x ${TOOLS_DIR}/bin/gitSecret.sh
+
   ## Create Symbolic Links to executables
   cd ${TOOLS_DIR}/bin
   ln -s ../quarkus-cli/bin/quarkus quarkus
@@ -73,6 +77,8 @@ function getTools() {
   ln -s ../node/bin/npm npm
   ln -s ../node/bin/corepack corepack
   ln -s ../node/bin/npx npx
+  ln -s /projects/oc oc
+  ln -s /projects/kubectl kubectl
   cd -
 }
 
