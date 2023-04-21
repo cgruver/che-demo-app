@@ -60,8 +60,8 @@ function getTools() {
 
   ## NodeJS
   TEMP_DIR="$(mktemp -d)"
-  curl -fsSL -o ${TEMP_DIR}/node.tgz https://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}-linux-x64.tar.xz
-  tar -x --no-auto-compress -f node.tz ${TEMP_DIR}/node.tz -C ${TEMP_DIR}
+  curl -fsSL -o ${TEMP_DIR}/node.tz https://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}-linux-x64.tar.xz
+  tar -x --no-auto-compress -f ${TEMP_DIR}/node.tz -C ${TEMP_DIR}
   mv ${TEMP_DIR}/node-${NODE_VERSION}-linux-x64 ${TOOLS_DIR}/node
   rm -rf "${TEMP_DIR}"
 
