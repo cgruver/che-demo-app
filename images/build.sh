@@ -77,8 +77,8 @@ function getTools() {
   ln -s ../node/bin/npm npm
   ln -s ../node/bin/corepack corepack
   ln -s ../node/bin/npx npx
-  ln -s /projects/oc oc
-  ln -s /projects/kubectl kubectl
+  ln -s /projects/bin/oc oc
+  ln -s /projects/bin/kubectl kubectl
   cd -
 }
 
